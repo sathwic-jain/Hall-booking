@@ -9,7 +9,9 @@ app.listen(PORT,()=>console.log("listening to",PORT));
 var customers=[{Customer_name:"name",Room_name:"3AD",Date:"date",Start_time:"start_time",End_time:"end_time"}];
 var rooms_booked=[{Customer_name:"name",Room_name:"A",Booked_Status:"",Date:"date",Start_time:"start_time",End_time:"end_"}];
 var rooms=[{Seats:46,Amenities:["Podium","A/C","Snacks"],Price_per_hour:"Rs.5000"}]
-
+app.get("/",async(req,res)=>{
+    res.send("Welcome to Hall booking API")
+})
 app.get("/customers",async(request,response)=>{
     response.send(customers);
 });
